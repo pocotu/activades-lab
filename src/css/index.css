@@ -104,7 +104,7 @@ body::before {
 .btn-primary {
     padding: 0.5rem 1.5rem;
     border-radius: var(--border-radius-pill);
-    background-color: var(--trans-button); /* Más transparente */
+    background-color: var(--trans-button); 
     border-color: var(--border-transparent-light); /* Borde más sutil */
     color: var(--color-text);
     backdrop-filter: blur(var(--blur-light));
@@ -130,14 +130,14 @@ body::before {
 
 /* Estilo para botones secundarios de navegación */
 .btn-outline-secondary {
-    border-color: var(--border-transparent-light); /* Más transparente */
+    border-color: var(--border-transparent-light);
     color: var(--color-text);
-    background-color: var(--trans-bg); /* Más transparente */
+    background-color: var(--trans-bg);
     backdrop-filter: blur(var(--blur-light));
 }
 
 .btn-outline-secondary:hover {
-    background-color: var(--trans-primary); /* Más transparente al hover */
+    background-color: var(--trans-primary); 
     border-color: var(--border-transparent-medium);
     color: var(--color-text);
 } 
