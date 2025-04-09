@@ -10,23 +10,23 @@
     --color-secondary-lighter: #333333; /* gris aún más claro */
     
     /* Sombras */
-    --color-shadow: rgba(0, 0, 0, 0.15); /* Más transparente */
+    --color-shadow: rgba(0, 0, 0, 0.15);
     --color-primary-shadow: rgba(34, 114, 255, 0.15); /* Sombra del color primario más transparente */
     
     /* Variables para transparencia */
     --trans-bg: rgba(29, 29, 29, 0.5);
     --trans-bg-darker: rgba(29, 29, 29, 0.6);
     --trans-primary: rgba(34, 114, 255, 0.6);
-    --trans-card: rgba(29, 29, 29, 0.8); 
-    --trans-element: rgba(51, 51, 51, 0.4); 
-    --trans-button: rgba(34, 114, 255, 0.6); 
-    --trans-function-btn: rgba(42, 42, 42, 0.5); 
+    --trans-card: rgba(29, 29, 29, 0.45);
+    --trans-element: rgba(51, 51, 51, 0.4);
+    --trans-button: rgba(34, 114, 255, 0.6);
+    --trans-function-btn: rgba(42, 42, 42, 0.5);
     
     /* Overlay para fondos */
-    --overlay-dark: rgba(0, 0, 0, 0.4); /* Más transparente */
+    --overlay-dark: rgba(0, 0, 0, 0.6);
     
     /* Valores de texto resaltado */
-    --text-shadow-primary: 0 0 10px rgba(34, 114, 255, 0.4); /* Más transparente */
+    --text-shadow-primary: 0 0 10px rgba(34, 114, 255, 0.4); 
     
     /* Valores de dimensiones comunes */
     --border-radius-standard: 10px;
@@ -35,16 +35,25 @@
     --border-radius-pill: 30px;
     
     /* Valores de animación */
-    --transition-standard: all 0.8s;
+    --transition-standard: all 0.2s;
     --transition-hover: all 0.3s;
     
     /* Valores de blur para backdrop-filter */
     --blur-standard: 8px; /* Reducido */
     --blur-light: 4px; /* Reducido */
+    
+    /* Bordes transparentes */
+    --border-transparent-light: rgba(34, 114, 255, 0.3);
+    --border-transparent-medium: rgba(34, 114, 255, 0.5);
+    
+    /* Sombras sutiles */
+    --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 10px 20px var(--color-shadow);
 }
 
 /* Estilos específicos para la página de índice */
 body {
+    background-image: url('/src/img/fondo.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -71,22 +80,22 @@ body::before {
     border-radius: var(--border-radius-standard);
     overflow: hidden;
     background-color: var(--trans-card); /* Fondo semitransparente */
-    border: 1px solid rgba(34, 114, 255, 0.3); /* Borde más transparente */
+    border: 1px solid var(--border-transparent-light); /* Borde más transparente */
     backdrop-filter: blur(var(--blur-standard));
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: var(--shadow-subtle); /* Sombra sutil */
 }
 
 .activity-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px var(--color-shadow);
-    border: 1px solid rgba(34, 114, 255, 0.5); /* Borde más visible al hover pero aún transparente */
+    box-shadow: var(--shadow-hover);
+    border: 1px solid var(--border-transparent-medium); /* Borde más visible al hover pero aún transparente */
     background-color: var(--trans-bg-darker);
 }
 
 .card-title {
     color: var(--color-primary);
     font-weight: 600;
-    text-shadow: 0 0 10px rgba(34, 114, 255, 0.3); /* Brillo sutil */
+    text-shadow: var(--text-shadow-primary); /* Brillo sutil */
 }
 
 .card-text {
@@ -96,16 +105,16 @@ body::before {
 .btn-primary {
     padding: 0.5rem 1.5rem;
     border-radius: var(--border-radius-pill);
-    background-color: rgba(34, 114, 255, 0.4); /* Más transparente */
-    border-color: rgba(34, 114, 255, 0.3); /* Borde más sutil */
+    background-color: var(--trans-button); /* Más transparente */
+    border-color: var(--border-transparent-light); /* Borde más sutil */
     color: var(--color-text);
     backdrop-filter: blur(var(--blur-light));
-    box-shadow: 0 2px 8px rgba(34, 114, 255, 0.2); /* Sombra sutil */
+    box-shadow: var(--shadow-subtle); /* Sombra sutil */
 }
 
 .btn-primary:hover {
-    background-color: rgba(34, 114, 255, 0.7); /* Más visible al hover pero aún con transparencia */
-    border-color: rgba(34, 114, 255, 0.6);
+    background-color: var(--trans-primary); /* Más visible al hover pero aún con transparencia */
+    border-color: var(--border-transparent-medium);
     color: var(--color-text);
     box-shadow: 0 0 15px var(--color-primary-shadow);
 }
@@ -122,14 +131,14 @@ body::before {
 
 /* Estilo para botones secundarios de navegación */
 .btn-outline-secondary {
-    border-color: rgba(34, 114, 255, 0.3); /* Más transparente */
+    border-color: var(--border-transparent-light); /* Más transparente */
     color: var(--color-text);
-    background-color: rgba(29, 29, 29, 0.3); /* Más transparente */
+    background-color: var(--trans-bg); /* Más transparente */
     backdrop-filter: blur(var(--blur-light));
 }
 
 .btn-outline-secondary:hover {
-    background-color: rgba(34, 114, 255, 0.4); /* Más transparente al hover */
-    border-color: rgba(34, 114, 255, 0.5);
+    background-color: var(--trans-primary); /* Más transparente al hover */
+    border-color: var(--border-transparent-medium);
     color: var(--color-text);
 } 

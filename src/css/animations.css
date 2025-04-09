@@ -1,6 +1,9 @@
 /* Importación de fuentes de Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
+/* Importación de variables de color */
+@import url('/src/css/index.css');
+
 /* Contenedor principal de la animación */
 .area{
     position: fixed;
@@ -29,7 +32,7 @@
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(34, 114, 255, 0.3); /* Color base más transparente */
+    background: var(--trans-primary); /* Usa la variable de color primario transparente */
     animation: animate 25s linear infinite; /* Aplica la animación principal */
     bottom: -150px; /* Comienza fuera de la pantalla (abajo) */
     border-radius: 5px; /* Bordes ligeramente redondeados al inicio */
@@ -41,7 +44,7 @@
     width: 80px;
     height: 80px;
     animation-delay: 0s; /* Sin retraso */
-    background: rgba(34, 114, 255, 0.2); /* Más transparente */
+    background: var(--trans-primary); /* Usa la variable de color primario transparente */
 }
 
 /* Personalización del círculo #2 */
@@ -51,7 +54,7 @@
     height: 20px;
     animation-delay: 2s; /* Retrasa el inicio 2 segundos */
     animation-duration: 12s; /* Duración más corta que la estándar */
-    background: rgba(34, 114, 255, 0.25); /* Más transparente */
+    background: var(--trans-primary); /* Usa la variable de color primario transparente */
 }
 
 /* Personalización del círculo #3 */
@@ -60,7 +63,7 @@
     width: 20px;
     height: 20px;
     animation-delay: 4s; /* Retrasa el inicio 4 segundos */
-    background: rgba(34, 114, 255, 0.15); /* Más transparente */
+    background: var(--trans-primary); /* Usa la variable de color primario transparente */
 }
 
 /* Personalización del círculo #4 */
@@ -70,7 +73,7 @@
     height: 60px;
     animation-delay: 0s;
     animation-duration: 18s; /* Duración personalizada */
-    background: rgba(34, 114, 255, 0.3); /* Más transparente */
+    background: var(--trans-primary); /* Usa la variable de color primario transparente */
 }
 
 /* Personalización del círculo #5 */
@@ -79,7 +82,7 @@
     width: 20px;
     height: 20px;
     animation-delay: 0s;
-    background: rgba(34, 114, 255, 0.2); /* Más transparente */
+    background: var(--trans-primary); /* Usa la variable de color primario transparente */
 }
 
 /* Personalización del círculo #6 */
@@ -88,7 +91,7 @@
     width: 110px;
     height: 110px;
     animation-delay: 3s; /* Retrasa el inicio 3 segundos */
-    background: rgba(34, 114, 255, 0.15); /* Más transparente */
+    background: var(--trans-primary); /* Usa la variable de color primario transparente */
 }
 
 /* Personalización del círculo #7 */
@@ -97,7 +100,7 @@
     width: 150px;
     height: 150px;
     animation-delay: 7s; /* Retrasa el inicio 7 segundos */
-    background: rgba(34, 114, 255, 0.1); /* Muy transparente */
+    background: var(--trans-primary); /* Usa la variable de color primario transparente */
 }
 
 /* Personalización del círculo #8 */
@@ -107,7 +110,7 @@
     height: 25px;
     animation-delay: 15s; /* Retraso largo */
     animation-duration: 45s; /* Duración muy larga */
-    background: rgba(34, 114, 255, 0.25); /* Más transparente */
+    background: var(--trans-primary); /* Usa la variable de color primario transparente */
 }
 
 /* Personalización del círculo #9 */
@@ -117,7 +120,7 @@
     height: 15px;
     animation-delay: 2s;
     animation-duration: 35s; /* Duración larga */
-    background: rgba(34, 114, 255, 0.2); /* Más transparente */
+    background: var(--trans-primary); /* Usa la variable de color primario transparente */
 }
 
 /* Personalización del círculo #10 */
@@ -127,7 +130,7 @@
     height: 150px;
     animation-delay: 0s;
     animation-duration: 11s; /* Duración personalizada */
-    background: rgba(34, 114, 255, 0.1); /* Muy transparente */
+    background: var(--trans-primary); /* Usa la variable de color primario transparente */
 }
 
 /* Definición de la animación principal */
