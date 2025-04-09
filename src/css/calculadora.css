@@ -1,0 +1,86 @@
+@import url('../css/index.css');
+
+body {
+    background-color: var(--color-secondary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator-card {
+    background-color: var(--trans-card);
+    border-radius: var(--border-radius-large);
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px var(--color-shadow);
+    border: 1px solid var(--trans-primary);
+    backdrop-filter: blur(var(--blur-standard));
+}
+
+.calculator-display {
+    margin-bottom: 1.5rem;
+}
+
+#display {
+    background-color: var(--trans-element);
+    font-weight: bold;
+    font-size: 1.8rem;
+    height: 70px;
+    border: 1px solid var(--trans-primary);
+    color: var(--color-text);
+    text-align: right;
+    padding-right: 15px;
+    backdrop-filter: blur(var(--blur-light));
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.calc-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 15px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: var(--transition-standard);
+    backdrop-filter: blur(var(--blur-light));
+}
+
+.calc-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px var(--color-primary-shadow);
+}
+
+.calc-btn:active {
+    transform: scale(0.95);
+}
+
+.number-btn {
+    background-color: var(--trans-element);
+}
+
+.operation-btn {
+    background-color: var(--trans-button);
+}
+
+.function-btn {
+    background-color: var(--trans-function-btn);
+}
+
+.equals-btn {
+    background-color: var(--trans-button);
+    font-weight: 700;
+}
+
+/* Botón de cero que ocupa 2 espacios */
+.zero-btn {
+    grid-column: span 2;
+}
+
+h1.display-5 {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-shadow: var(--text-shadow-primary);
+} 

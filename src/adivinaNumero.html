@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el Número</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/src/css/adivinaNumero.css">
+</head>
+<body>
+    <div class="container py-5">
+        <header class="text-center mb-4">
+            <h1 class="display-5">Adivina el Número</h1>
+            <a href="/index.html" class="btn btn-outline-secondary mt-2">Volver al inicio</a>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="game-card">
+                    <div class="mb-4 text-center">
+                        <p class="lead">He pensado un número entre 1 y 10.</p>
+                        <p>¿Podrás adivinarlo? Tienes <span id="intentos-restantes">3</span> intentos.</p>
+                    </div>
+                    
+                    <div class="number-picker mb-4">
+                        <div class="input-group">
+                            <input type="number" id="guess-input" class="form-control form-control-lg text-center" min="1" max="10" placeholder="Tu número">
+                            <button id="comprobar-btn" class="btn btn-primary">Comprobar</button>
+                        </div>
+                    </div>
+                    
+                    <div id="resultado" class="text-center mb-4 result-container d-none">
+                        <div id="mensaje-resultado" class="mb-2"></div>
+                        <div id="numero-secreto" class="secret-number mb-3 d-none"></div>
+                    </div>
+                    
+                    <div class="attempts-container">
+                        <h5>Intentos anteriores:</h5>
+                        <div id="intentos" class="d-flex flex-wrap gap-2 justify-content-center">
+                            <!-- Los intentos se agregarán aquí dinámicamente -->
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2 mt-4">
+                        <button id="nuevo-juego-btn" class="btn btn-success">Nuevo Juego</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/adivinaNumero.js"></script>
+</body>
+</html> 
