@@ -1,0 +1,148 @@
+/* Importación de fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+/* Contenedor principal de la animación */
+.area{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2; /* Coloca la animación detrás del contenido principal */
+    overflow: hidden;
+}
+
+/* Contenedor de los elementos animados (círculos) */
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Estilos base para todos los círculos */
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(34, 114, 255, 0.3); /* Color base más transparente */
+    animation: animate 25s linear infinite; /* Aplica la animación principal */
+    bottom: -150px; /* Comienza fuera de la pantalla (abajo) */
+    border-radius: 5px; /* Bordes ligeramente redondeados al inicio */
+}
+
+/* Personalización del círculo #1 */
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s; /* Sin retraso */
+    background: rgba(34, 114, 255, 0.2); /* Más transparente */
+}
+
+/* Personalización del círculo #2 */
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s; /* Retrasa el inicio 2 segundos */
+    animation-duration: 12s; /* Duración más corta que la estándar */
+    background: rgba(34, 114, 255, 0.25); /* Más transparente */
+}
+
+/* Personalización del círculo #3 */
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s; /* Retrasa el inicio 4 segundos */
+    background: rgba(34, 114, 255, 0.15); /* Más transparente */
+}
+
+/* Personalización del círculo #4 */
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s; /* Duración personalizada */
+    background: rgba(34, 114, 255, 0.3); /* Más transparente */
+}
+
+/* Personalización del círculo #5 */
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    background: rgba(34, 114, 255, 0.2); /* Más transparente */
+}
+
+/* Personalización del círculo #6 */
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s; /* Retrasa el inicio 3 segundos */
+    background: rgba(34, 114, 255, 0.15); /* Más transparente */
+}
+
+/* Personalización del círculo #7 */
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s; /* Retrasa el inicio 7 segundos */
+    background: rgba(34, 114, 255, 0.1); /* Muy transparente */
+}
+
+/* Personalización del círculo #8 */
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s; /* Retraso largo */
+    animation-duration: 45s; /* Duración muy larga */
+    background: rgba(34, 114, 255, 0.25); /* Más transparente */
+}
+
+/* Personalización del círculo #9 */
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s; /* Duración larga */
+    background: rgba(34, 114, 255, 0.2); /* Más transparente */
+}
+
+/* Personalización del círculo #10 */
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s; /* Duración personalizada */
+    background: rgba(34, 114, 255, 0.1); /* Muy transparente */
+}
+
+/* Definición de la animación principal */
+@keyframes animate {
+    /* Estado inicial: posición original, opacidad completa, sin bordes redondeados */
+    0%{
+        transform: translateY(0) rotate(0deg); /* Sin desplazamiento ni rotación */
+        opacity: 1; /* Completamente visible */
+        border-radius: 0; /* Sin redondeo */
+    }
+
+    /* Estado final: elevado, rotado, transparente y circular */
+    100%{
+        transform: translateY(-1000px) rotate(720deg); /* Sube y gira dos vueltas completas */
+        opacity: 0; /* Desaparece */
+        border-radius: 50%; /* Se vuelve completamente circular */
+    }
+} 
